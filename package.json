@@ -21,5 +21,8 @@
   },
   "volta": {
     "node": "16.14.2"
+  },
+  "dependencies": {
+    "merge-descriptors": "^1.0.1"
   }
 }
