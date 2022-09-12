@@ -14,16 +14,6 @@ function listSorting(needle, haystack) {
         }
     }
 
-    if (occurence === 0){
-        return -1;
-    } else if (occurence === 1){
-        // if the occurence is 1, return the index of the needle
-        return haystack.indexOf(needle);
-    } else {
-        //if the occurence is more than 1, return the index of the last occurence
-        return haystack.lastIndexOf(needle);   
-    
-    }
      
     //check if haystack is an array of arrays
     if(typeof(haystack[0]) === 'object'){
@@ -46,7 +36,26 @@ function listSorting(needle, haystack) {
         return [row, column];
         } else {
             return haystack.lastIndexOf(needle);
-        }      
-}
+        }
         
+        
+    if (occurence === 0){
+        return -1;
+    } else if (occurence === 1){
+        // if the occurence is 1, return the index of the needle
+        return haystack.indexOf(needle);
+    } else {
+        //if the occurence is more than 1, return the index of the last occurence
+        return haystack.lastIndexOf(needle);   
+    
+    }
+}
+console.log(listSorting(200, [
+    [100, 200, 300],
+    [300, 200, 100],
+    [300, 100, 200],
+    [200, 100, 300],
+    [100, 200, 300],
+  ])
+);        
 module.exports = listSorting;
